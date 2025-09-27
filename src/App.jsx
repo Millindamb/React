@@ -1,11 +1,11 @@
-import { useState } from 'react'
+import { useState ,useRef} from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [count, setCount] = useState(0);
+  const [showbtn,setshowbtn]=useState(true);
   return (
     <>
       <div>
@@ -17,8 +17,14 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
+      {/* one way of conditional redering */}
+      {/* {!showbtn ? (
+        <button>Hide this button</button>
+      ):""} */}
+      {showbtn && <button>this is a button</button>}
+      {/* another way of conditional redering */}
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
+        <button onClick={() => setshowbtn(!showbtn)}>
           count is {count}
         </button>
         <p>
