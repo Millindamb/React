@@ -1,31 +1,5 @@
 body {
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-}
-
-.card {
-  height: 150px;
-  width: 150px;
-  margin: 10px;
-  border-radius: 5px;
-  background-color: grey;
-}
-.ids{
-  background-color: black;
-  display: flex;
-  justify-content: space-between;
-}
-.cards{
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 2px;
-}
-.btn{
-  justify-content: center;
-  background-color: black;
-  height: 20px;
-  color: aliceblue;
+  height: 90vh;
 }
