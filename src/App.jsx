@@ -3,6 +3,8 @@ import Login from "./component/Login"
 import Home from "./component/Home"
 import About from "./component/About"
 import User from "./component/User"
+// Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt, ipsa perspiciatis magni itaque consectetu
+// r ipsum unde nesciunt minus excepturi enim voluptates facere, sint sed voluptatum. Optio magni aspernatur tempore accusamus.
 //latest way to use router
 import { createBrowserRouter ,RouterProvider} from 'react-router-dom'
 import "./App.css"
