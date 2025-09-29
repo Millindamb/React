@@ -1,42 +1,45 @@
-import React from "react"
-import Login from "./component/Login"
-import Home from "./component/Home"
-import About from "./component/About"
-import User from "./component/User"
-// Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt, ipsa perspiciatis magni itaque consectetu
-// r ipsum unde nesciunt minus excepturi enim voluptates facere, sint sed voluptatum. Optio magni aspernatur tempore accusamus.
-//latest way to use router
-import { createBrowserRouter ,RouterProvider} from 'react-router-dom'
-import "./App.css"
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
 import Navbar from './component/navbar'
-//how to make multi-page applicaitons using react router
-// so that the page does hot get reload when we go from one page to another
-//why router: because when we use <a> tag then it reload the page
-// to use router we need to install it first using the command (npm i react-router-dom)
+import './App.css'
+//use context allows us to use any variable anywhere
+//to use the counter variable everywhere we use counterContext
+import { counterContext } from './context/context'
+
 function App() {
-  const route=createBrowserRouter([
-    {
-      path:"/home",
-      element:<><Navbar/><Home/></>
-    },
-    {
-      path:"/login",
-      element:<><Navbar/><Login/></>
-    },
-    {
-      path:"/about",
-      element:<><Navbar/><About/></>
-    },
-    {
-      path:"/user/:usename",
-      element:<><Navbar/><User/></>
-    } 
-  ])
+  const [count, setCount] = useState(0)
+
   return (
     <>
-    <RouterProvider router={route}/>
+    {/* this value(counter) is avaliable in navbar(to from buttom to from Digit) */}
+    {/* <counterContext.Provider value={count}> this will only pass the counter value*/}
+        <counterContext.Provider value={{count,setCount}}>
+      <Navbar></Navbar>
+      <di>
+        <a href="https://vite.dev" target="_blank">
+          <img src={viteLogo} className="logo" alt="Vite logo" />
+        </a>
+        <a href="https://react.dev" target="_blank">
+          <img src={reactLogo} className="logo react" alt="React logo" />
+        </a>
+      </di>
+      <h1>Vite + React</h1>
+      <div className="card">
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </button>
+        <p>
+          Edit <code>src/App.jsx</code> and save to test HMR
+        </p>
+      </div>
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
+    </counterContext.Provider>
     </>
   )
 }
 
 export default App
+// this is 
