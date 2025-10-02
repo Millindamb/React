@@ -1,7 +1,9 @@
 function App() {
+  const username="hello world";
   return (
     <>
-      <h2>there is something written in here</h2>
+    {/* inside {} we can only write evaluated expresions like variable and cannot write if else.. */}
+      <h2>there is something written in here {username}</h2>
     </>
   )
 }
