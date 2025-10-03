@@ -1,10 +1,25 @@
+import { useState } from 'react'
+import './App.css'
+
 function App() {
-  const username="hello world";
+  const [color,setColor]=useState('grey');
   return (
-    <>
-    {/* inside {} we can only write evaluated expresions like variable and cannot write if else.. */}
-      <h2>there is something written in here {username}</h2>
-    </>
+    <div
+  style={{
+    backgroundColor: color,
+    height: "100vh",
+    width: "100vw"
+  }}>
+      <div className='Buttons'>
+        <button onClick={()=>{setColor('black')}}>black</button>
+        <button onClick={()=>{setColor('yellow')}}>yellow</button>
+        <button onClick={()=>{setColor('red')}}>red</button>
+        <button onClick={()=>{setColor('blue')}}>blue</button>
+        <button onClick={()=>{setColor('purple')}}>purple</button>
+        <button onClick={()=>{setColor('lightpink')}}>pink</button>
+        <button onClick={()=>{setColor('lightcyan')}}>cyan</button>
+        </div>
+    </div>
   )
 }
 

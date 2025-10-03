@@ -1,0 +1,27 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Buttons{
+  border-radius: 5px;
+  border: 1px solid black;
+  position: fixed;
+  bottom: 50px;
+  height: 50px;
+  width: 400px;
+  background-color:cornflowerblue;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+button{
+  border-radius: 5px;
+  border: 1px solid black;
+  height: 30px;
+  width: 12%;
+}
